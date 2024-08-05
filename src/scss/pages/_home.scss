@@ -3,7 +3,6 @@
 // =========================
 .hero-section {
   position: relative;
-  // min-height: 43.75rem;
   &__container {
     position: relative;
     z-index: 2;
@@ -21,5 +20,62 @@
     line-height: 3.5rem;
     text-align: center;
     color: #fff;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    &__container {
+      padding-top: 12.56rem;
+      padding-bottom: 10.62rem;
+      gap: 4rem;
+    }
+    &__title {
+      max-width: 57.3125rem;
+      font-size: 2.8rem;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    &__container {
+      padding-top: 11.56rem;
+      padding-bottom: 9.62rem;
+      gap: 3rem;
+    }
+    &__title {
+      font-size: 2rem;
+      line-height: 2.85rem;
+    }
+  } 
+}
+
+@media (max-width: 360px) {
+  .hero-section {
+    &__container {
+      padding-top: 5.19rem;
+      padding-bottom: 3.75rem;
+    }
+    &__title {
+      font-size: 1.625rem;
+      line-height: 2.125rem;
+    }
+    &__btn {
+      max-width: 15.4375rem;
+    }
+  } 
+}
+
+
+
+
+
+// =========================
+// questions-section
+// =========================
+.questions-section {
+  &__container {
+
   }
 }
