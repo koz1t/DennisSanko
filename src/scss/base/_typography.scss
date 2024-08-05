@@ -43,3 +43,9 @@ html, body {
     font-size: 1.11111vw;
   }
 }
+
+@media (max-width: 991px) {
+  html, body {
+    font-size: calc(14px + 3.8863 * (100vw - 481px) / 991);
+  }
+}

@@ -1,0 +1,41 @@
+.partners-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  row-gap: 1.44rem;
+  &__item {
+    transition: 0.4s all;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__item span, &__item a {
+    display: block;
+    height: 3.75rem;
+    img {
+      @extend %fill-image;
+    }
+  }
+  &__more {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.62rem;
+      transition: 0.3s all;
+      &::after {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M9.33333 3.33334L14 8.00001M14 8.00001L9.33333 12.6667M14 8.00001H2' stroke='%23A7B6BF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+        transition: inherit;
+      }
+      &:hover {
+        color: $primaryColor;
+        &::after {
+          transform: translateX(10%);
+        }
+      }
+    }
+  }
+}

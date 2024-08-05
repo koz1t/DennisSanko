@@ -1,3 +1,7 @@
+.home-page {
+  background: #EDF0F2;
+}
+
 // =========================
 // hero-section
 // =========================
@@ -75,7 +79,117 @@
 // questions-section
 // =========================
 .questions-section {
+  background: #fff;
+  border-radius: 0 0 18.75rem 0;
   &__container {
-
+    padding-top: 8.31rem;
+    padding-bottom: 13.75rem;
   }
+  &__section-title {
+    margin-bottom: 7.19rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .questions-section {
+    border-radius: 0 0 15rem 0;
+    &__container {
+      padding-top: 6.5rem;
+      padding-bottom: 11rem;
+    }
+    &__section-title {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .questions-section {
+    border-radius: 0 0 12rem 0;
+    &__container {
+      padding-top: 4rem;
+      padding-bottom: 9rem;
+    }
+    &__section-title {
+      margin-bottom: 5.5rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .questions-section {
+    border-radius: 0 0 8.75rem 0;
+    &__container {
+      padding-top: 3.12rem;
+      padding-bottom: 5.5rem;
+    }
+    &__section-title {
+      margin-bottom: 4.44rem;
+    }
+  }
+}
+
+
+
+
+
+// =========================
+// about-section
+// =========================
+.about-section {
+  &__container {
+    display: flex;
+    padding-top: 6.25rem;
+  }
+  &__content {
+    @extend %flex-column;
+    padding-bottom: 6.25rem;
+    flex: 1 0 63.3%;
+  }
+  &__section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 4rem;
+    &:not(:last-child) {
+      margin-bottom: 4.13rem;
+    }
+    b, strong {
+      color: $primaryColor;
+    }
+  }
+  &__text {
+    font-size: 1.875rem;
+    font-weight: 500;
+    line-height: 2.25rem;
+    &:not(:last-child) {
+      margin-bottom: 4.25rem;
+    }
+  }
+  &__partners-list {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    .partners-list__item:nth-child(n+10) {
+      display: none;
+    }
+  }
+  &__image {
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.steps-section {
+  position: relative;
 }

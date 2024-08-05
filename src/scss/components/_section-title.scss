@@ -1,0 +1,27 @@
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 3.5rem;
+  color: #B1BDC1;
+}
+
+@media (max-width: 991px) {
+  .section-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 2.125rem;
+    letter-spacing: -0.0325rem;
+  }
+}

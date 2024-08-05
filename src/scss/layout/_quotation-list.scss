@@ -1,0 +1,89 @@
+.quotation-list {
+  &__item {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+    color: $primaryColor;
+    transition: 0.7s all;
+    &:not(:last-child) {
+      margin-bottom: 4.56rem;
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      transition: inherit;
+    }
+    &::before {
+      bottom: calc(100% + 1.36rem);
+      left: 0;
+      width: 1.902rem;
+      height: 1.64219rem;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='31' height='27' viewBox='0 0 31 27' fill='none'%3E%3Cpath d='M30.432 0.259102L29.664 5.7311C28.128 5.6031 26.88 5.8591 25.92 6.4991C24.96 7.1071 24.288 8.00311 23.904 9.1871C23.552 10.3391 23.488 11.6831 23.712 13.2191H30.432V26.2751H17.376V13.2191C17.376 8.6111 18.448 5.1231 20.592 2.7551C22.736 0.355103 26.016 -0.476898 30.432 0.259102ZM13.056 0.259102L12.288 5.7311C10.752 5.6031 9.504 5.8591 8.544 6.4991C7.584 7.1071 6.912 8.00311 6.528 9.1871C6.176 10.3391 6.112 11.6831 6.336 13.2191H13.056V26.2751H0V13.2191C0 8.6111 1.072 5.1231 3.216 2.7551C5.36 0.355103 8.64 -0.476898 13.056 0.259102Z' fill='%233D565F'/%3E%3C/svg%3E") no-repeat center / contain;
+      opacity: 0.35;
+    }
+    &::after {
+      bottom: calc(100% + 1.94rem);
+      right: 0;
+      width: 96.6578%;
+      height: 0.125rem;
+      background: #D4DDE0;
+    }
+    &:hover {
+      color: $secondaryColor;
+      &::before {
+        opacity: 1;
+      }
+      &::after {
+        background: $secondaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .quotation-list {
+    &__item {
+      font-size: 3rem;
+      line-height: 4rem;
+      &::after {
+        width: 93%;
+      }
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .quotation-list {
+    &__item {
+      font-size: 2.5rem;
+      line-height: 3.3rem;
+      &::before {
+        width: 1.602rem;
+        height: 1.24219rem;
+      }
+      &::after {
+        width: 93%;
+      }
+    }
+  } 
+}
+
+@media (max-width: 360px) {
+  .quotation-list {
+    &__item {
+      font-size: 1.625rem;
+      line-height: 2.125rem;
+      &:not(:last-child) {
+        margin-bottom: 4.26rem;
+      }
+      &::before {
+        bottom: calc(100% + 1.06rem);
+      }
+      &::after {
+        bottom: calc(100% + 1.64rem);
+        width: 90%;
+      }
+    }
+  } 
+}
