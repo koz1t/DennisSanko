@@ -1,0 +1,21 @@
+@import 'abstracts/variables';
+@import 'abstracts/placeholders';
+
+@import 'vendors/reset';
+
+@import 'base/base';
+@import 'base/typography';
+
+@import 'layout/container';
+@import 'layout/nav';
+@import 'layout/bg';
+@import 'layout/contacts-list';
+@import 'layout/socials-list';
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/logo';
+@import 'components/btn';
+@import 'components/burger-btn';
+
+@import 'pages/home';

@@ -1,0 +1,32 @@
+.burger-btn {
+  width: 3.28571rem;
+  height: 3.28571rem;
+	span {
+		display: block;
+    margin: 0 auto;
+		width: 80%;
+		height: 0.25rem;
+		background: #A7B6BF;
+		transition: 0.3s transform, 0.3s opacity;
+		&:nth-child(1) { transform: translateY(-0.4rem); }
+		&:nth-child(3) { transform: translateY( 0.4rem); }
+	}
+
+	&--active {
+		span {
+			&:nth-child(1) { transform: translateY( 100%) rotate( 45deg); }
+			&:nth-child(2) { opacity: 0; }
+			&:nth-child(3) { transform: translateY(-100%) rotate(-45deg); }
+		}
+	}
+}
+
+@media (max-width: 360px) {
+  .burger-btn {
+    width: 2rem;
+    height: 2rem;
+    span {
+      height: 0.125rem;
+    }
+  }
+}

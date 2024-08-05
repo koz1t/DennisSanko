@@ -1,0 +1,18 @@
+.contacts-list {
+  @extend %flex-column;
+  &__link {
+    font-size: 1.25rem;
+    line-height: normal;
+    color: #3D565F;
+    transition: 0.3s all;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  &--white {
+    .contacts-list__link {
+      color: #fff;
+    }
+  }
+}

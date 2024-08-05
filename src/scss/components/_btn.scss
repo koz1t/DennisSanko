@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.62rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  color: #fff;
+  background: $primaryColor;
+  border-radius: 0.625rem;
+  transition: 0.4s all, 0.01s transform;
+  &:hover {
+    background: darken($primaryColor, 10%);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &--arrow {
+    &::after {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background: url("../images/common/arrow.svg") no-repeat center / contain;
+      transition: 0.4s all;
+    }
+    &:hover::after {
+      transform: translateX(10%);
+    }
+  }
+}

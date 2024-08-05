@@ -1,0 +1,23 @@
+.socials-list {
+  display: flex;
+  gap: 1.14rem;
+  &__link {
+    display: block;
+    width: 2.3125rem;
+    height: 2.3125rem;
+    img, svg {
+      @extend %fill-image;
+    }
+    svg path {
+      transition: 0.3s all;
+    }
+    &:hover {
+      svg path[fill]:not([fill="white"]) {
+        fill: $primaryColor;
+      }
+      svg path[stroke]:not([stroke="white"]) {
+        stroke: $primaryColor;
+      }
+    }
+  }
+}
