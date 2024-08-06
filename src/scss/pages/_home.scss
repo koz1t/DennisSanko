@@ -325,9 +325,182 @@
 
 
 
+// =========================
+// advantages-section
+// =========================
+.advantages-section {
+  background: #fff;
+  border-radius: 18.75rem 0 0 0;
+  &__container {
+    padding-top: 8rem;
+    padding-bottom: 8.44rem;
+  }
+  &__section-title {
+    max-width: 48.5625rem;
+    margin-bottom: 5.38rem;
+  }
+}
+@media (max-width: 1600px) {
+  .advantages-section {
+    border-radius: 0;
+    &__container {
+      padding-top: 6.75rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .advantages-section {
+    &__container {
+      padding-top: 6rem;
+      padding-bottom: 8rem;
+    }
+    &__section-title {
+      margin-bottom: 3.85rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .advantages-section {
+    &__container {
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+    }
+    &__section-title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .advantages-section {
+    &__container {
+      padding-top: 3.12rem;
+      padding-bottom: 5.88rem;
+    }
+  }
+}
 
 
 
+
+
+// =========================
+// steps-section
+// =========================
 .steps-section {
   position: relative;
+  padding: 6.25rem 1.385%;
+  &__container {
+    position: relative;
+    z-index: 2;
+    width: 1610px;
+    padding: 5.38rem 6.25rem 6.25rem;
+    background: $secondaryColor;
+    border-radius: 1.25rem;
+  }
+  &__headlines {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    row-gap: 1.63rem;
+    &:not(:last-child) {
+      margin-bottom: 7.87rem;
+    }
+  }
+  &__heading {
+    font-size: 1.875rem;
+    line-height: 2rem;
+    color: #fff;
+    b, strong {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 4.5rem;
+      color: $primaryColor;
+      text-transform: uppercase;
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+  }
+  &__tabs {
+    &:not(:last-child) {
+      margin-bottom: 8.25rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .steps-section {
+    &__container {
+      padding: 4.38rem 2.25rem 2.25rem;
+    }
+    &__headlines {
+      flex-direction: column;
+      &:not(:last-child) {
+        margin-bottom: 5.5rem;
+      }
+    }
+    &__heading {
+      font-size: 1.6rem;
+      b, strong {
+        font-size: 3.8rem;
+      }
+    }
+    &__tabs {
+      &:not(:last-child) {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-section {
+    padding: 3.25rem 1.385%;
+    &__headlines {
+      &:not(:last-child) {
+        margin-bottom: 4.5rem;
+      }
+    }
+    &__heading {
+      font-size: 1.3rem;
+      b, strong {
+        font-size: 3rem;
+      }
+    }
+    &__tabs {
+      &:not(:last-child) {
+        margin-bottom: 4.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .steps-section {
+    padding: 1.25rem 2.78%;
+    &__container {
+      padding: 2.25rem 1.13rem;
+    }
+    &__headlines {
+      &:not(:last-child) {
+        margin-bottom: 3.13rem;
+      }
+    }
+    &__heading {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      b, strong {
+        font-size: 2rem;
+        line-height: normal;
+      }
+    }
+    &__tabs {
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
 }
