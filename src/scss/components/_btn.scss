@@ -1,6 +1,9 @@
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: 100%;
   gap: 0.62rem;
   padding: 1.5rem 2rem;
   font-size: 1.125rem;

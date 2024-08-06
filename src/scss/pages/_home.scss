@@ -183,6 +183,144 @@
   }
 }
 
+@media (max-width: 991px) {
+  .about-section {
+    overflow: hidden;
+    &__container {
+      flex-direction: column;
+    }
+    &__content {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    &__section-title {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__text {
+      font-size: 1.5rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__partners-list {
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
+    }
+    &__content:not(:last-child) {
+      .about-section__text, .about-section__partners-list {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+      .about-section__partners-list, .about-section__btn {
+        position: absolute;
+      }
+      .about-section__partners-list {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+      }
+      .partners-list__more {
+        display: none;
+      }
+      .partners-list__item:nth-child(n+10) {
+        display: block;
+      }
+      .about-section__btn {
+        top: calc(100% + 30rem);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+      }
+    }
+    &__image {
+      position: relative;
+      z-index: 2;
+      max-width: 30rem;
+      height: 40rem;
+      margin: 0 auto;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    &__container {
+      padding-top: 4.5rem;
+    }
+    &__section-title {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__text {
+      font-size: 1.3rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__partners-list {
+      gap: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &__content:not(:last-child) {
+      .about-section__btn {
+        top: calc(100% + 28rem);
+      }
+    }
+    &__image {
+      height: 35rem;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .about-section {
+    &__container {
+      padding-top: 3.13rem;
+    }
+    &__section-title {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    &__text {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+    &__partners-list {
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+    &__content:not(:last-child) {
+      .about-section__btn {
+        top: calc(100% + 20rem);
+      }
+      .about-section__partners-list {
+        justify-content: space-between;
+      }
+    }
+    &__image {
+      width: 100%;
+      height: 26rem;
+    }
+  }
+}
+
 
 
 
