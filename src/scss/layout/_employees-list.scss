@@ -1,0 +1,43 @@
+.employees-list {
+  @extend %flex-column;
+  gap: 1rem;
+  &__item {
+    @extend %flex-column;
+  }
+  &__name {
+    font-size: 2.625rem;
+    line-height: normal;
+    color: $primaryColor;
+  }
+  &__post {
+    font-size: 1.25rem;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 991px) {
+  .employees-list {
+    &__name {
+      font-size: 2.2rem;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .employees-list {
+    &__name {
+      font-size: 2rem;
+    }
+  } 
+}
+
+@media (max-width: 360px) {
+  .employees-list {
+    &__name {
+      font-size: 1.85rem;
+    }
+    &__post {
+      font-size: 1.15rem;
+    }
+  } 
+}

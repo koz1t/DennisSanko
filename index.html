@@ -283,29 +283,33 @@
 
       <section class="contacts-section">
         <div class="contacts-section__container container">
-          <div class="feedback-form">
-            <div class="feedback-form__title"></div>
+          <div class="contacts-section__feedback-form feedback-form">
+            <div class="feedback-form__title">Получить детальное предложение по участию в разработке HR стратегии</div>
             <form class="feedback-form__form" action="">
               <div class="feedback-form__inputs">
-                <input class="feedback-form__input" type="text" placeholder="Имя*">
-                <input class="feedback-form__input" type="text" placeholder="Компания*">
-                <input class="feedback-form__input" type="text" placeholder="Телефон*">
-                <input class="feedback-form__input" type="text" placeholder="E-mail*">
+                <div class="feedback-form__inputs-row">
+                  <input class="feedback-form__input" type="text" placeholder="Имя*">
+                  <input class="feedback-form__input" type="text" placeholder="Компания*">
+                </div>
+                <div class="feedback-form__inputs-row">
+                  <input class="feedback-form__input" type="text" placeholder="Телефон*">
+                  <input class="feedback-form__input" type="text" placeholder="E-mail*">
+                </div>
               </div>
               <div class="feedback-form__mark">* обязательные для заполнения поля</div>
-              <button class="btn btn--arrow" type="submit">Получить детальное предложение</button>
+              <button class="feedback-form__submit btn btn--arrow" type="submit">Получить детальное предложение</button>
             </form>
           </div>
           <div class="contacts-section__contacts">
             <div class="contacts-section__contacts-title">Обсудить программу</div>
-            <ul class="contacts-list">
+            <ul class="contacts-section__contacts-list contacts-list">
               <li class="contacts-list__item"><a class="contacts-list__link" href="tel:+375296819754">+375 29 681 97 54 (РБ)</a></li>
               <li class="contacts-list__item"><a class="contacts-list__link" href="tel:+79654348629">+7 965 434-86-29 (РФ)</a></li>
             </ul>
-            <ul class="contacts-list">
+            <ul class="contacts-section__contacts-list contacts-list">
               <li class="contacts-list__item"><a class="contacts-list__link" href="mailto:partners@denissanko.com">partners@denissanko.com</a></li>
             </ul>
-            <ul class="socials-list">
+            <ul class="contacts-section__socials-list socials-list">
               <li class="socials-list__item">
                 <a class="socials-list__link" href="#" target="_blank">
                   <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +337,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="employees-list">
+            <ul class="contacts-section__employees-list employees-list">
               <li class="employees-list__item">
                 <span class="employees-list__name">Маргарита Раковчук</span>
                 <span class="employees-list__post">менеджер обучающих программ</span>

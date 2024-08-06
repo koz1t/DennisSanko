@@ -629,3 +629,147 @@
     }
   }
 }
+
+
+
+
+
+// =========================
+// contacts-section
+// =========================
+.contacts-section {
+    background: #fff;
+    &__container {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+    display: flex;
+  }
+  &__feedback-form {
+    &:not(:last-child) {
+      flex: 1 0 65.22%;
+      padding-right: 3.81rem;
+      border-right: 0.0625rem solid #000;
+    }
+    .feedback-form__title {
+      max-width: 39.183rem;
+    }
+  }
+  &__contacts {
+    &:not(:first-child) {
+      padding-left: 3.31rem;
+    }
+  }
+  &__contacts-title {
+    font-size: 2.25rem;
+    line-height: normal;
+    color: #A7B6BF;
+    &:not(:last-child) {
+      margin-bottom: 7.94rem;
+    }
+  }
+  &__contacts-list {
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+  &__socials-list {
+    &:not(:first-child) {
+      margin-top: 1.44rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: 4.42rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contacts-section {
+    &__container {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      flex-direction: column;
+    }
+    &__feedback-form {
+      &:not(:last-child) {
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 3.5rem;
+        border-bottom: 0.0625rem solid #000;
+      }
+    }
+    &__contacts {
+      &:not(:first-child) {
+        padding-left: 0;
+        padding-top: 3.5rem;
+      }
+    }
+    &__contacts-title {
+      font-size: 2.25rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__contacts-list {
+      & + & {
+        margin-top: 0.85rem;
+      }
+    }
+    &__socials-list {
+      &:not(:first-child) {
+        margin-top: 1.25rem;
+      }
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .contacts-section {
+    &__container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    &__feedback-form {
+      &:not(:last-child) {
+        padding-bottom: 2.2rem;
+      }
+    }
+    &__contacts {
+      &:not(:first-child) {
+        padding-top: 2.2rem;
+      }
+    }
+    &__contacts-title {
+      font-size: 2rem;
+    }
+  } 
+}
+
+@media (max-width: 360px) {
+  .contacts-section {
+    &__container {
+      padding-top: 3.12rem;
+      padding-bottom: 3.12rem;
+    }
+    &__feedback-form {
+      &:not(:last-child) {
+        padding-bottom: 1.87rem;
+      }
+    }
+    &__contacts {
+      &:not(:first-child) {
+        padding-top: 1.87rem;
+      }
+    }
+    &__contacts-title {
+      font-size: 1.625rem;
+    }
+    &__socials-list {
+      &:not(:last-child) {
+        margin-bottom: 2.2rem;
+      }
+    }
+  } 
+}
