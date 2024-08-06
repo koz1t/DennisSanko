@@ -32,17 +32,18 @@ $basicFontColor: #3D565F;
 
 html, body {
   font-family: 'Manrope', sans-serif;
-  font-size: $basicFontSize;
+  // font-size: $basicFontSize;
+  font-size: 0.833333vw;
   font-weight: 500;
   line-height: 1.5rem;
   color: $basicFontColor;
 }
 
-@media (max-width: 1440px) and (min-width: 992px) {
-  html, body {
-    font-size: 1.11111vw;
-  }
-}
+// @media (max-width: 1440px) and (min-width: 992px) {
+//   html, body {
+//     font-size: 1.11111vw;
+//   }
+// }
 
 @media (max-width: 991px) {
   html, body {
