@@ -1,0 +1,35 @@
+.payments-list {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 2.75rem;
+  overflow: auto;
+  &__item {
+    min-width: 3rem;
+    height: 2rem;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .payments-list {
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+    &__item {
+      min-width: 3rem;
+      height: 2rem;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .payments-list {
+    &__item {
+      min-width: 2rem;
+      height: 1.5rem;
+    }
+  }  
+}
