@@ -504,3 +504,128 @@
     }
   }
 }
+
+
+
+
+
+// =========================
+// results-section
+// =========================
+.results-section {
+  display: flex;
+  &__container-wrapper {
+    flex: 0 0 100%;
+  }
+  &__container {
+    padding-top: 6.75rem;
+    padding-bottom: 6.75rem;
+  }
+  &__container-wrapper:not(:last-child) {
+   .results-section__content {
+    width: 70%;
+   } 
+  }
+  &__section-title {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: 3.13rem;
+    }
+  }
+  &__image {
+    position: relative;
+    flex: 0 0 33.59%;
+    transform: translateX(-100%);
+    border-radius: 18.5rem 0 0 0;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @extend %stretch-image;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .results-section {
+    &__image {
+      flex: 0 0 30%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .results-section {
+    position: relative;
+    flex-direction: column;
+    &__container {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+    &__container-wrapper:not(:last-child) {
+      .results-section__content {
+        width: 100%;
+      }
+      .results-section__timeline .timeline__result {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        &:not(:first-child) {
+          margin-top: 12.35rem;
+        }
+      }
+    }
+    &__section-title {
+      font-size: 3.5rem;
+      &:not(:last-child) {
+        margin-bottom: 2.8rem;
+      }
+    }
+    &__image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 21rem;
+      transform: none;
+      border-radius: 13.5rem 0 0 0;
+      filter: brightness(0.8);
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend %stretch-image;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .results-section {
+    &__container {
+      padding-top: 5rem;
+      padding-bottom: 1.3rem;
+    }
+    &__container-wrapper:not(:last-child) {
+      .results-section__timeline .timeline__result {
+        &:not(:first-child) {
+          margin-top: 12.35rem;
+        }
+      }
+    }
+    &__section-title {
+      font-size: 2.8rem;
+      &:not(:last-child) {
+        margin-bottom: 2.3rem;
+      }
+    }
+    &__image {
+      height: 17.5rem;
+      border-radius: 12rem 0 0 0;
+    }
+  }
+}
