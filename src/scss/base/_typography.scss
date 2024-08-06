@@ -46,6 +46,14 @@ html, body {
 
 @media (max-width: 991px) {
   html, body {
-    font-size: calc(14px + 3.8863 * (100vw - 481px) / 991);
+    // font-size: calc(14px + 3.8863 * (100vw - 481px) / 991);
+    font-size: 1.412715vw;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: calc(12px + 6 * (100vw - 320px) / 480);
+    // font-size: 1.412715vw;
   }
 }

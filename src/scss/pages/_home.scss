@@ -187,7 +187,7 @@
   .about-section {
     overflow: hidden;
     &__container {
-      flex-direction: column;
+      // flex-direction: column;
     }
     &__content {
       position: relative;
@@ -211,7 +211,68 @@
         margin-bottom: 3.5rem;
       }
     }
-    &__content:not(:last-child) {
+    // &__content:not(:last-child) {
+    //   .about-section__text, .about-section__partners-list {
+    //     &:not(:last-child) {
+    //       margin-bottom: 0;
+    //     }
+    //   }
+    //   .about-section__partners-list, .about-section__btn {
+    //     position: absolute;
+    //   }
+    //   .about-section__partners-list {
+    //     top: 100%;
+    //     left: 0;
+    //     width: 100%;
+    //     justify-content: center;
+    //   }
+    //   .partners-list__more {
+    //     display: none;
+    //   }
+    //   .partners-list__item:nth-child(n+10) {
+    //     display: block;
+    //   }
+    //   .about-section__btn {
+    //     top: calc(100% + 30rem);
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     z-index: 3;
+    //   }
+    // }
+    // &__image {
+    //   position: relative;
+    //   z-index: 2;
+    //   max-width: 30rem;
+    //   height: 40rem;
+    //   margin: 0 auto;
+    //   img {
+    //     height: 100%;
+    //     object-fit: contain;
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    &__container {
+      padding-top: 4.5rem;
+      flex-direction: column;
+    }
+    &__section-title {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__text {
+      font-size: 1.3rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+     &__content:not(:last-child) {
       .about-section__text, .about-section__partners-list {
         &:not(:last-child) {
           margin-bottom: 0;
@@ -248,27 +309,6 @@
       img {
         height: 100%;
         object-fit: contain;
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    &__container {
-      padding-top: 4.5rem;
-    }
-    &__section-title {
-      font-size: 2rem;
-      line-height: 2.5rem;
-      &:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-    }
-    &__text {
-      font-size: 1.3rem;
-      &:not(:last-child) {
-        margin-bottom: 2rem;
       }
     }
     &__partners-list {
@@ -437,7 +477,7 @@
       padding: 4.38rem 2.25rem 2.25rem;
     }
     &__headlines {
-      flex-direction: column;
+      // flex-direction: column;
       &:not(:last-child) {
         margin-bottom: 5.5rem;
       }
@@ -460,6 +500,7 @@
   .steps-section {
     padding: 3.25rem 1.385%;
     &__headlines {
+      flex-direction: column;
       &:not(:last-child) {
         margin-bottom: 4.5rem;
       }
