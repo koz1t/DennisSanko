@@ -560,6 +560,7 @@
 // =========================
 .results-section {
   display: flex;
+  overflow-x: hidden;
   &__container-wrapper {
     flex: 0 0 100%;
   }
@@ -585,20 +586,16 @@
     flex: 0 0 33.59%;
     transform: translateX(-100%);
     border-radius: 18.5rem 0 0 0;
-    overflow: hidden;
-    img {
+    picture {
       position: absolute;
       top: 0;
       left: 0;
-      @extend %stretch-image;
+      width: 100%;
+      height: 100%;
     }
-  }
-}
-
-@media (max-width: 1700px) {
-  .results-section {
-    &__image {
-      flex: 0 0 30%;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -606,10 +603,29 @@
 @media (max-width: 991px) {
   .results-section {
     position: relative;
-    flex-direction: column;
     &__container {
       padding-top: 6rem;
       padding-bottom: 6rem;
+    }
+    &__section-title {
+      font-size: 3.5rem;
+      &:not(:last-child) {
+        margin-bottom: 2.8rem;
+      }
+    }
+    &__image {
+      flex: 0 0 54.9%;
+      transform: translateX(-60%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .results-section {
+    flex-direction: column;
+    &__container {
+      padding-top: 5rem;
+      padding-bottom: 1.3rem;
     }
     &__container-wrapper:not(:last-child) {
       .results-section__content {
@@ -620,46 +636,7 @@
         z-index: 2;
         color: #fff;
         &:not(:first-child) {
-          margin-top: 16.35rem;
-        }
-      }
-    }
-    &__section-title {
-      font-size: 3.5rem;
-      &:not(:last-child) {
-        margin-bottom: 2.8rem;
-      }
-    }
-    &__image {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 23rem;
-      transform: none;
-      border-radius: 13.5rem 0 0 0;
-      filter: brightness(0.8);
-      overflow: hidden;
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        @extend %stretch-image;
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .results-section {
-    &__container {
-      padding-top: 5rem;
-      padding-bottom: 1.3rem;
-    }
-    &__container-wrapper:not(:last-child) {
-      .results-section__timeline .timeline__result {
-        &:not(:first-child) {
-          margin-top: 12.35rem;
+          margin-top: 63%;
         }
       }
     }
@@ -670,8 +647,15 @@
       }
     }
     &__image {
-      height: 17.5rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform: none;
+      height: 0;
+      padding-bottom: 78%;
       border-radius: 12rem 0 0 0;
+      filter: brightness(0.8);
     }
   }
 }
