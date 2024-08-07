@@ -37,6 +37,8 @@
       top: 100%;
       left: 0;
       width: 100%;
+      max-height: calc(100vh - 4.625rem);
+      overflow: auto;
       background: $secondaryColor;
       transition: 0.4s all;
     }
@@ -116,6 +118,7 @@
       padding-bottom: 1.06rem;
     }
     &__mobile-wrapper {
+      max-height: calc(100vh - 3.2857rem);
       padding: 0 2.78% 3.14rem;
     }
   }
