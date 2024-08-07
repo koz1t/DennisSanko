@@ -300,12 +300,24 @@
             <form class="feedback-form__form" action="/">
               <div class="feedback-form__inputs">
                 <div class="feedback-form__inputs-row">
-                  <input class="feedback-form__input" type="text" placeholder="Имя*">
-                  <input class="feedback-form__input" type="text" placeholder="Компания*">
+                  <label class="feedback-form__input --req">
+                    <input type="text" name="name" placeholder="Имя*">
+                  </label>
+                  <label class="feedback-form__input --req">
+                    <input type="text" name="company" placeholder="Компания*">
+                  </label>
                 </div>
                 <div class="feedback-form__inputs-row">
-                  <input class="feedback-form__input" type="text" placeholder="Телефон*">
-                  <input class="feedback-form__input" type="text" placeholder="E-mail*">
+                  <label class="feedback-form__input --req">
+                    <input type="text" name="phone" placeholder="Телефон*">
+                    <select name="country-code">
+                      <option value="+375" data-mask="(__) ___-__-__">+375</option>
+                      <option value="+7" data-mask="(___) ___-__-__">+7</option>
+                    </select>
+                  </label>
+                  <label class="feedback-form__input --req">
+                    <input type="text" name="email" placeholder="E-mail*">
+                  </label>
                 </div>
               </div>
               <div class="feedback-form__mark">* обязательные для заполнения поля</div>
