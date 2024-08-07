@@ -7,9 +7,9 @@ if (header && burgerBtn) {
   const menuControl = (flag) => {
     if (flag) {
       header.classList.add('header--burger-active');
-      // PageControl(true);
+      pageControl(true);
     } else {
-      // PageControl(false);
+      pageControl(false);
       header.classList.remove('header--burger-active');
     }
   }

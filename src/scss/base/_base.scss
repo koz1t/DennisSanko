@@ -10,6 +10,18 @@ html, body, .wrapper {
   margin-top: auto;
 }
 
+body {
+  .main, .footer {
+    transition: 0.4s filter;
+  }
+  &.body--lock {
+    overflow: hidden;
+    .main, .footer {
+      filter: blur(0.3rem) brightness(0.7);
+    }
+  }
+}
+
 img {
   max-width: 100%;
 }

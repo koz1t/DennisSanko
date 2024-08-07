@@ -431,11 +431,11 @@
 // =========================
 .steps-section {
   position: relative;
-  padding: 6.25rem 1.385%;
+  padding: 6.25rem 0;
   &__container {
     position: relative;
     z-index: 2;
-    width: 1610px;
+    width: 86.25%;
     padding: 5.38rem 6.25rem 6.25rem;
     background: $secondaryColor;
     border-radius: 1.25rem;
@@ -474,6 +474,7 @@
 @media (max-width: 991px) {
   .steps-section {
     &__container {
+      width: 97.98%;
       padding: 4.38rem 2.25rem 2.25rem;
     }
     &__headlines {
@@ -498,7 +499,10 @@
 
 @media (max-width: 480px) {
   .steps-section {
-    padding: 3.25rem 1.385%;
+    padding: 3.25rem 0;
+    &__container {
+      width: 91.67%;
+    }
     &__headlines {
       flex-direction: column;
       &:not(:last-child) {
@@ -615,7 +619,7 @@
         z-index: 2;
         color: #fff;
         &:not(:first-child) {
-          margin-top: 12.35rem;
+          margin-top: 16.35rem;
         }
       }
     }
@@ -630,7 +634,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 21rem;
+      height: 23rem;
       transform: none;
       border-radius: 13.5rem 0 0 0;
       filter: brightness(0.8);
