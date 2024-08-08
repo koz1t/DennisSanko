@@ -78,6 +78,7 @@
     width: 14.25rem;
     padding: 0.5rem 1.62rem 0.5rem 1rem;
     @extend %flex-column;
+    gap: 0.7rem;
     background: $primaryColor;
     transition: 0.4s all;
     &-item {
@@ -85,7 +86,7 @@
     }
     &-link {
       font-size: 0.875rem;
-      line-height: 1.875rem;
+      line-height: 1rem;
       color: #fff;
       transition: inherit;
     }
