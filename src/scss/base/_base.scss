@@ -25,3 +25,12 @@ body {
 img {
   max-width: 100%;
 }
+
+form {
+  input, select {
+    &:hover, &:active, &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}

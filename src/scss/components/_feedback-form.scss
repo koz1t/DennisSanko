@@ -17,6 +17,9 @@
     }
   }
   &__input {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 0.75rem;
     width: 100%;
     padding: 1.38rem 1.62rem;
     color: #8EA4AC;
@@ -24,11 +27,18 @@
     border: 0.0625rem solid #CDE2E7;
     border-radius: 0.5rem;
     transition: 0.3s all;
-    &:active, &:focus {
-      outline: none;
+    input {
+      width: 100%;
     }
-    &:focus {
+    select {
+      appearance: auto;
+    }
+    &:has(input:focus) {
       box-shadow: 0 0 1rem 0 darken(#CDE2E7, 5%);
+    }
+
+    &.--error {
+      border-color: red;
     }
   }
   &__mark {

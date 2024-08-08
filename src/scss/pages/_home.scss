@@ -451,6 +451,7 @@
     }
   }
   &__heading {
+    @extend %flex-column;
     font-size: 1.875rem;
     line-height: 2rem;
     color: #fff;
