@@ -51,6 +51,9 @@
     &:not(:first-child) {
       margin-top: 2.5rem;
     }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 }
 

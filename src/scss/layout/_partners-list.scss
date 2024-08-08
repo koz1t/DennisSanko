@@ -39,3 +39,11 @@
     }
   }
 }
+
+@media (max-width: 991px) and (min-width: 481px) {
+  .partners-list {
+    &__item span, &__item a {
+      height: 3rem;
+    }
+  }
+}
