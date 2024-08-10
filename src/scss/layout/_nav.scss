@@ -75,18 +75,60 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 14.25rem;
-    padding: 0.5rem 1.62rem 0.5rem 1rem;
+    padding: 0.5rem 0;
     @extend %flex-column;
     gap: 0.7rem;
     background: $primaryColor;
     transition: 0.4s all;
     &-item {
+      width: 14.25rem;
+      padding: 0 1.62rem 0 1rem;
       transition: 0.3s all;
+      &-has-child {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0.5rem;
+          transform: translateY(-50%) rotate(-90deg);
+          width: 1.125rem;
+          height: 1.125rem;
+          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M14.25 7.25L9 12.5L3.75 7.25' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+          transition: inherit;
+        }
+        &:hover::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M14.25 7.25L9 12.5L3.75 7.25' stroke='%233D565F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+        & > .nav__submenu {
+          top: 0;
+          left: 100%;
+          .nav__submenu-link {
+            width: 100%;
+            &:not(:hover) {
+              color: #fff;
+            }
+          }
+        }
+        @media (hover: hover) and (min-width: 992px) {
+          &:not(:hover) > .nav__submenu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10%);
+          }
+        }
+        @media (hover: none) and (min-width: 992px) {
+          &:not(.active) > .nav__submenu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10%);
+          }
+        }
+      }
     }
     &-link {
+      display: block;
       font-size: 0.875rem;
-      line-height: 1rem;
       color: #fff;
       transition: inherit;
     }
