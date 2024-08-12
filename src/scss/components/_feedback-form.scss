@@ -29,6 +29,9 @@
     transition: 0.3s all;
     input {
       width: 100%;
+      &::placeholder {
+        color: #8EA4AC;
+      }
     }
     &:has(input:focus) {
       box-shadow: 0 0 1rem 0 darken(#CDE2E7, 5%);
