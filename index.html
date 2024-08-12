@@ -297,27 +297,28 @@
             <form class="feedback-form__form" action="/">
               <div class="feedback-form__inputs">
                 <div class="feedback-form__inputs-row">
-                  <label class="feedback-form__input --req">
+                  <div class="feedback-form__input --req">
                     <input type="text" name="name" placeholder="Имя*">
-                  </label>
-                  <label class="feedback-form__input --req">
+                  </div>
+                  <div class="feedback-form__input --req">
                     <input type="text" name="company" placeholder="Компания*">
-                  </label>
+                  </div>
                 </div>
                 <div class="feedback-form__inputs-row">
-                  <label class="feedback-form__input --req">
+                  <div class="feedback-form__input --req">
                     <input type="text" name="phone" placeholder="Телефон*">
                     <div class="custom-select">
-                      <input class="custom-select__current" type="text" name="country-code" readonly value="+375">
+                      <input type="hidden" name="country-code">
+                      <span class="custom-select__current">+375</span>
                       <ul class="custom-select__options">
                         <li class="custom-select__option --current" data-mask="(__) ___-__-__">+375</li>
                         <li class="custom-select__option" data-mask="(___) ___-__-__">+7</li>
                       </ul>
                     </div>
-                  </label>
-                  <label class="feedback-form__input --req">
+                  </div>
+                  <div class="feedback-form__input --req">
                     <input type="text" name="email" placeholder="E-mail*">
-                  </label>
+                  </div>
                 </div>
               </div>
               <div class="feedback-form__mark" data-default="* обязательные для заполнения поля">* обязательные для заполнения поля</div>

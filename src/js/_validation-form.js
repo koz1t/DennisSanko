@@ -10,31 +10,31 @@ if (form) {
   const defaultFeedbackText = feedbackMark.getAttribute('data-default');
 
   function validateField(field) {
-    const label = field.closest('label');
+    const inputWrapper = field.closest('.feedback-form__input');
     if (!field.value.trim()) {
-      label.classList.add('--error');
+      inputWrapper.classList.add('--error');
       feedbackMark.classList.add('--error');
       feedbackMark.textContent = 'Ошибка! Проверьте правильность заполнения данных';
     } else {
-      label.classList.remove('--error');
+      inputWrapper.classList.remove('--error');
       checkFormValidity();
     }
   }
 
   function validateEmailField() {
-    const label = emailField.closest('label');
+    const inputWrapper = emailField.closest('.feedback-form__input');
     if (!validateEmail(emailField.value)) {
-      label.classList.add('--error');
+      inputWrapper.classList.add('--error');
       feedbackMark.classList.add('--error');
       feedbackMark.textContent = 'Ошибка! Проверьте правильность заполнения данных';
     } else {
-      label.classList.remove('--error');
+      inputWrapper.classList.remove('--error');
       checkFormValidity();
     }
   }
 
   function validatePhoneField() {
-    const label = phoneInput.closest('label');
+    const inputWrapper = phoneInput.closest('.feedback-form__input');
     const mask = phoneInput.placeholder;
     const value = phoneInput.value;
     const isValid = mask.split('').every((char, index) => {
@@ -44,17 +44,17 @@ if (form) {
       return char === value[index];
     });
     if (!isValid) {
-      label.classList.add('--error');
+      inputWrapper.classList.add('--error');
       feedbackMark.classList.add('--error');
       feedbackMark.textContent = 'Ошибка! Проверьте правильность заполнения данных';
     } else {
-      label.classList.remove('--error');
+      inputWrapper.classList.remove('--error');
       checkFormValidity();
     }
   }
 
   function checkFormValidity() {
-    const hasError = form.querySelectorAll('label.--error').length > 0;
+    const hasError = form.querySelectorAll('.feedback-form__input.--error').length > 0;
     if (!hasError) {
       feedbackMark.classList.remove('--error');
       feedbackMark.textContent = defaultFeedbackText;
@@ -65,6 +65,7 @@ if (form) {
     field.addEventListener('blur', () => validateField(field));
     field.addEventListener('input', () => validateField(field));
   });
+
   emailField.addEventListener('blur', validateEmailField);
   emailField.addEventListener('input', validateEmailField);
   phoneInput.addEventListener('blur', validatePhoneField);
@@ -83,7 +84,7 @@ if (form) {
       isValid = false;
     }
     validatePhoneField();
-    if (phoneInput.closest('label').classList.contains('--error')) {
+    if (phoneInput.closest('.feedback-form__input').classList.contains('--error')) {
       isValid = false;
     }
     if (!isValid) {
@@ -100,7 +101,7 @@ if (form) {
     const selectedOption = customSelect.querySelector('.custom-select__option.--current');
     const mask = selectedOption.getAttribute('data-mask');
     phoneInput.placeholder = mask;
-    phoneInput.value = ''; // Очищаем значение поля
+    phoneInput.value = '';
     phoneInput.removeEventListener('input', maskInput);
     phoneInput.addEventListener('input', maskInput);
   }
@@ -127,7 +128,7 @@ if (form) {
 
   customSelectOptions.forEach(option => {
     option.addEventListener('click', function () {
-      customSelectCurrent.value = this.textContent;
+      customSelectCurrent.textContent = this.textContent;
       customSelectOptions.forEach(opt => opt.classList.remove('--current'));
       this.classList.add('--current');
       updatePhonePlaceholderAndMask();
@@ -142,4 +143,15 @@ if (form) {
   });
 
   updatePhonePlaceholderAndMask();
+
+  // Добавляем обработчик клика на div, чтобы передать фокус input
+  const inputWrappers = form.querySelectorAll('.feedback-form__input');
+  inputWrappers.forEach(wrapper => {
+    wrapper.addEventListener('click', function () {
+      const input = wrapper.querySelector('input');
+      if (input) {
+        input.focus();
+      }
+    });
+  });
 }

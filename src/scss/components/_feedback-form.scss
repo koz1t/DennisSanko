@@ -30,9 +30,6 @@
     input {
       width: 100%;
     }
-    select {
-      appearance: auto;
-    }
     &:has(input:focus) {
       box-shadow: 0 0 1rem 0 darken(#CDE2E7, 5%);
     }
