@@ -4,3 +4,4 @@
 //@prepros-append cards
 //@prepros-append tabs
 //@prepros-append validation-form
+//@prepros-append typing-text

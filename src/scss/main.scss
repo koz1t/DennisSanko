@@ -1,5 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/placeholders';
+@import 'abstracts/animations';
 
 @import 'vendors/reset';
 
@@ -27,5 +28,6 @@
 @import 'components/section-title';
 @import 'components/feedback-form';
 @import 'components/custom-select';
+@import 'components/typing-text';
 
 @import 'pages/home';
