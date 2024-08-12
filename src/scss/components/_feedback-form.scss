@@ -45,6 +45,9 @@
     &:not(:first-child) {
       margin-top: 0.5rem;
     }
+    &.--error {
+      color: red;
+    }
   }
   &__submit {
     width: 100%;
