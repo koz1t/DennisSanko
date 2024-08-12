@@ -5,12 +5,14 @@
     @extend %flex-column;
   }
   &__name {
-    font-size: 2.625rem;
+    font-size: 2.5rem;
+    font-weight: 800;
     line-height: normal;
     color: $primaryColor;
   }
   &__post {
     font-size: 1.25rem;
+    font-weight: 700;
     line-height: normal;
   }
 }

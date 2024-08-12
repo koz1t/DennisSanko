@@ -186,9 +186,6 @@
 @media (max-width: 991px) {
   .about-section {
     overflow: hidden;
-    &__container {
-      // flex-direction: column;
-    }
     &__content {
       position: relative;
       padding-bottom: 2rem;
@@ -692,6 +689,7 @@
   }
   &__contacts-title {
     font-size: 2.25rem;
+    font-weight: 800;
     line-height: normal;
     color: #A7B6BF;
     &:not(:last-child) {
