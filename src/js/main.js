@@ -5,3 +5,4 @@
 //@prepros-append tabs
 //@prepros-append validation-form
 //@prepros-append typing-text
+//@prepros-append quotation-list

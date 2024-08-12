@@ -29,7 +29,7 @@
       height: 0.125rem;
       background: #D4DDE0;
     }
-    &:hover {
+    &.--active {
       color: $secondaryColor;
       &::before {
         opacity: 1;
@@ -38,6 +38,15 @@
         background: $secondaryColor;
       }
     }
+    // &:hover {
+    //   color: $secondaryColor;
+    //   &::before {
+    //     opacity: 1;
+    //   }
+    //   &::after {
+    //     background: $secondaryColor;
+    //   }
+    // }
   }
 }
 
