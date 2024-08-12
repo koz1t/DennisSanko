@@ -110,7 +110,7 @@
         </div>
         <div class="hero-section__container container">
           <h1 class="hero-section__title" data-typing="Разработайте прорывную HR стратегию к началу ноября 2024!">Разработайте прорывную HR стратегию к началу ноября 2024!</h1>
-          <a class="hero-section__btn btn btn--arrow" href="#">Получить детальное предложение</a>
+          <button class="hero-section__btn btn btn--arrow" data-popup-feedback>Получить детальное предложение</button>
         </div>
       </section>
       <!-- /hero-section -->
@@ -417,6 +417,47 @@
     </footer>
     <!-- /footer -->
 
+  </div>
+
+  <div class="popup" id="feedback-popup">
+    <div class="popup__container container">
+      <div class="popup__content">
+        <div class="feedback-form">
+          <h2 class="feedback-form__title">Получить детальное предложение по участию в разработке HR стратегии</h2>
+          <form class="feedback-form__form" action="/">
+            <div class="feedback-form__inputs">
+              <div class="feedback-form__inputs-row">
+                <div class="feedback-form__input --req">
+                  <input type="text" name="name" placeholder="Имя*">
+                </div>
+                <div class="feedback-form__input --req">
+                  <input type="text" name="company" placeholder="Компания*">
+                </div>
+              </div>
+              <div class="feedback-form__inputs-row">
+                <div class="feedback-form__input --req">
+                  <input type="text" name="phone" placeholder="Телефон*">
+                  <div class="custom-select">
+                    <input type="hidden" name="country-code">
+                    <span class="custom-select__current">+375</span>
+                    <ul class="custom-select__options">
+                      <li class="custom-select__option --current" data-mask="(__) ___-__-__">+375</li>
+                      <li class="custom-select__option" data-mask="(___) ___-__-__">+7</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="feedback-form__input --req">
+                  <input type="text" name="email" placeholder="E-mail*">
+                </div>
+              </div>
+            </div>
+            <div class="feedback-form__mark" data-default="* обязательные для заполнения поля">* обязательные для заполнения поля</div>
+            <button class="feedback-form__submit btn btn--arrow" type="submit">Получить детальное предложение</button>
+          </form>
+        </div>
+        <button class="popup__close"></button>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.js"></script>

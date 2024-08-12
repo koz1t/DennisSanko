@@ -1,12 +1,12 @@
-const form = document.querySelector('.feedback-form__form');
-if (form) {
+const forms = document.querySelectorAll('.feedback-form__form');
+forms.forEach(form => {
   const requiredFields = form.querySelectorAll('.feedback-form__input.--req input');
   const emailField = form.querySelector('input[name="email"]');
   const phoneInput = form.querySelector('input[name="phone"]');
-  const customSelect = document.querySelector('.custom-select');
+  const customSelect = form.querySelector('.custom-select');
   const customSelectCurrent = customSelect.querySelector('.custom-select__current');
   const customSelectOptions = customSelect.querySelectorAll('.custom-select__option');
-  const feedbackMark = document.querySelector('.feedback-form__mark');
+  const feedbackMark = form.querySelector('.feedback-form__mark');
   const defaultFeedbackText = feedbackMark.getAttribute('data-default');
 
   function validateField(field) {
@@ -122,7 +122,7 @@ if (form) {
     e.target.setSelectionRange(newCursorPosition, newCursorPosition);
   }
 
-  customSelectCurrent.addEventListener('click', function () {
+  customSelect.addEventListener('click', function () {
     customSelect.classList.toggle('--active');
   });
 
@@ -154,4 +154,4 @@ if (form) {
       }
     });
   });
-}
+});
