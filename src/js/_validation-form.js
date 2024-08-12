@@ -132,7 +132,6 @@ forms.forEach(form => {
       customSelectOptions.forEach(opt => opt.classList.remove('--current'));
       this.classList.add('--current');
       updatePhonePlaceholderAndMask();
-      customSelect.classList.remove('--active');
     });
   });
 
