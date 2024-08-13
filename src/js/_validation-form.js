@@ -8,6 +8,7 @@ forms.forEach(form => {
   const customSelectOptions = customSelect.querySelectorAll('.custom-select__option');
   const feedbackMark = form.querySelector('.feedback-form__mark');
   const defaultFeedbackText = feedbackMark.getAttribute('data-default');
+  const countryCodeInput = form.querySelector('input[name="country-code"]');
 
   function validateField(field) {
     const inputWrapper = field.closest('.feedback-form__input');
@@ -104,6 +105,7 @@ forms.forEach(form => {
     phoneInput.value = '';
     phoneInput.removeEventListener('input', maskInput);
     phoneInput.addEventListener('input', maskInput);
+    countryCodeInput.value = selectedOption.textContent; // Подставляем значение в скрытое поле
   }
 
   function maskInput(e) {
@@ -143,7 +145,6 @@ forms.forEach(form => {
 
   updatePhonePlaceholderAndMask();
 
-  // Добавляем обработчик клика на div, чтобы передать фокус input
   const inputWrappers = form.querySelectorAll('.feedback-form__input');
   inputWrappers.forEach(wrapper => {
     wrapper.addEventListener('click', function () {

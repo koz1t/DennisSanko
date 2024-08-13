@@ -135,7 +135,7 @@
               <p>Уже 20 лет Денис является переговорщиком между HRD и первыми лицами и помогает выбирать наилучшую траекторию развития HR функции.</p>
             </div>
             <ul class="about-section__partners-list partners-list">
-              <li class="partners-list__logos"><video class="slides-video" autoplay="" muted="" loop="" playsinline=""><source src="images/partners/logos.webm"></video></li>
+              <!-- <li class="partners-list__logos"><video class="slides-video" autoplay="" muted="" loop="" playsinline=""><source src="images/partners/logos.webm"></video></li> -->
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/anderson.svg" alt=""></a></li>
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/caterpillar.svg" alt=""></a></li>
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/kaspersky.svg" alt=""></a></li>
@@ -157,7 +157,7 @@
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/savushkin.svg" alt=""></a></li>
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/suek.svg" alt=""></a></li>
               <li class="partners-list__item"><a href="#" target="_blank"><img src="images/partners/tatneft.svg" alt=""></a></li>
-              <li class="partners-list__more"><a href="#">Все клиенты</a></li>
+              <!-- <li class="partners-list__more"><a href="#">Все клиенты</a></li> -->
             </ul>
             <a class="about-section__btn btn btn--arrow" href="#">Подробнее обо мне</a>
           </div>
@@ -167,6 +167,7 @@
         </div>
       </section>
       <!-- /about-section -->
+       <script>const partnersList = document.querySelector('.about-section__partners-list');const images = partnersList.querySelectorAll('img');const canvas = document.createElement('canvas');const ctx = canvas.getContext('2d');const spacing = 50;const imgHeight = 100;let totalWidth = 0;let loadedImages = 0;images.forEach(img => {  img.onload = function () {    const aspectRatio = img.width / img.height;    const imgWidth = imgHeight * aspectRatio;    totalWidth += imgWidth + spacing;    loadedImages++;    if (loadedImages === images.length) {      createCanvas();    }  };});function createCanvas() {  canvas.width = totalWidth;  canvas.height = imgHeight;  let x = 0;  images.forEach(img => {    const aspectRatio = img.width / img.height;    const imgWidth = imgHeight * aspectRatio;    ctx.drawImage(img, x, 0, imgWidth, imgHeight);    x += imgWidth + spacing;  });  const imgData = canvas.toDataURL('image/png');  partnersList.style.backgroundImage = `url(${imgData})`;  const containerHeight = partnersList.clientHeight;  const proportionalWidth = (canvas.width / canvas.height) * containerHeight;  const styleSheet = document.styleSheets[0];  const keyframes = `    @keyframes scrollBackground {      from {        background-position: 0 0;      }       to {        background-position: -${proportionalWidth}px 0;}}`;  styleSheet.insertRule(keyframes, styleSheet.cssRules.length);  partnersList.style.animation = `scrollBackground 30s linear infinite`;}</script>
 
       <section class="advantages-section">
         <div class="advantages-section__container container">

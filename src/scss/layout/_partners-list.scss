@@ -4,15 +4,6 @@
   flex-wrap: wrap;
   column-gap: 3rem;
   row-gap: 1.44rem;
-  &__logos {
-    height: 6rem;
-    filter: invert(0.7);
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
   &__item {
     transition: 0.4s all;
     &:hover {
@@ -51,6 +42,9 @@
 
 @media (min-width: 481px) {
   .partners-list {
+    width: 100%;
+    height: 5rem;
+    background-size: auto 100%;
     &__item, &__more {
       display: none;
     }
@@ -59,8 +53,6 @@
 
 @media (max-width: 480px) {
   .partners-list {
-    &__logos {
-      display: none;
-    }
+    background: none !important;
   }
 }
