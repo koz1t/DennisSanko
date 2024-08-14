@@ -58,6 +58,11 @@
       margin-bottom: 1rem;
     }
   }
+  &__form.sent {
+    .feedback-form__submit {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 991px) {
@@ -114,4 +119,34 @@
 // CONTACT FORM 7
 .screen-reader-response {
   display: none !important;
+}
+
+.wpcf7-response-output {
+  @extend %flex-column;
+  font-size: 1.25rem;
+  line-height: normal;
+  color: $primaryColor;
+  b, strong {
+    font-size: 2.25rem;
+    font-weight: 800;
+  }
+  &:not(:first-child) {
+    margin-top: 2.25rem;
+  }
+}
+
+.feedback-form__form:not(.sent) .wpcf7-response-output {
+  display: none
+}
+
+@media (max-width: 480px) {
+  .wpcf7-response-output {
+    font-size: 1.1rem;
+    b, strong {
+      font-size: 1.6rem;
+    }
+    &:not(:first-child) {
+      margin-top: 1.25rem;
+    }
+  } 
 }
