@@ -9,6 +9,8 @@ forms.forEach(form => {
   const feedbackMark = form.querySelector('.feedback-form__mark');
   const defaultFeedbackText = feedbackMark.getAttribute('data-default');
   const countryCodeInput = form.querySelector('input[name="country-code"]');
+  const formSubmit = form.querySelector('.feedback-form__submit[type="submit"]'); // Замените на ваш класс
+  const fakeFormSubmit = form.querySelector('.feedback-form__submit:not([type="submit"])'); // Замените на ваш класс
 
   function validateField(field) {
     const inputWrapper = field.closest('.feedback-form__input');
@@ -72,26 +74,32 @@ forms.forEach(form => {
   phoneInput.addEventListener('blur', validatePhoneField);
   phoneInput.addEventListener('input', validatePhoneField);
 
-  form.addEventListener('submit', function (event) {
-    let isValid = true;
-    requiredFields.forEach(field => {
-      validateField(field);
-      if (!field.value.trim()) {
+  if (fakeFormSubmit) {
+    fakeFormSubmit.addEventListener('click', function () {
+      let isValid = true;
+  
+      requiredFields.forEach(field => {
+        validateField(field);
+        if (!field.value.trim()) {
+          isValid = false;
+        }
+      });
+  
+      validateEmailField();
+      if (!validateEmail(emailField.value)) {
         isValid = false;
       }
+  
+      validatePhoneField();
+      if (phoneInput.closest('.feedback-form__input').classList.contains('--error')) {
+        isValid = false;
+      }
+  
+      if (isValid) {
+        formSubmit.click();
+      }
     });
-    validateEmailField();
-    if (!validateEmail(emailField.value)) {
-      isValid = false;
-    }
-    validatePhoneField();
-    if (phoneInput.closest('.feedback-form__input').classList.contains('--error')) {
-      isValid = false;
-    }
-    if (!isValid) {
-      event.preventDefault();
-    }
-  });
+  }
 
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

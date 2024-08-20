@@ -12,6 +12,7 @@
   color: #fff;
   background: $primaryColor;
   border-radius: 0.625rem;
+  cursor: pointer;
   transition: 0.4s all, 0.01s transform;
   &:hover {
     background: darken($primaryColor, 10%);
